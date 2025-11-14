@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-label="Layered diagram">
+  <rect width="400" height="220" rx="16" fill="#0f172a"/>
+  <rect x="30" y="32" width="340" height="48" rx="10" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="30" y="96" width="156" height="92" rx="10" fill="#38bdf8" opacity="0.85"/>
+  <rect x="214" y="96" width="156" height="92" rx="10" fill="#f472b6" opacity="0.85"/>
+  <text x="54" y="62" font-size="16" font-family="'IBM Plex Mono', monospace" fill="#94a3b8">
+    Remote MDX
+  </text>
+  <text x="76" y="150" font-size="18" font-family="'Inter', sans-serif" font-weight="600" fill="#0f172a">
+    Markdown
+  </text>
+  <text x="262" y="150" font-size="18" font-family="'Inter', sans-serif" font-weight="600" fill="#0f172a">
+    Components
+  </text>
+  <line x1="186" y1="142" x2="214" y2="142" stroke="#e2e8f0" stroke-width="4" stroke-dasharray="10 6"/>
+</svg>

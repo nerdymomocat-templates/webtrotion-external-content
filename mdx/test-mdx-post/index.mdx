@@ -1,0 +1,23 @@
+import FancyBadge from "./components/FancyBadge.astro";
+
+# Remote MDX Demo
+
+<FancyBadge title="Heads up">This section renders via a custom Astro component.</FancyBadge>
+
+Even though metadata (title, slug, tags, etc.) stays in Notion, the body of this post can live entirely in GitHub as MDX. You’re free to import local components, sprinkle JSX, and reference bundled media such as `./media/diagram.svg`.
+
+## Suggested tests
+
+- Host this folder in a repo and point a Notion page’s **External URL** to `index.mdx`.
+- Ensure your build pipeline copies remote components (e.g., `FancyBadge`) into a place MDX can import.
+- Verify that relative media links are rewritten or served from `public/posts/<slug>/media`.
+
+```tsx
+export function ExampleSnippet() {
+	return (
+		<div className="rounded-xl border border-dashed border-slate-500/50 p-4">
+			This MDX snippet mixes Markdown with JSX to ensure the compiler path works.
+		</div>
+	);
+}
+```

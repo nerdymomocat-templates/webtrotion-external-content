@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Remote HTML Demo</title>
+		<meta name="description" content="Plain HTML post rendered via GitHub external content." />
+	</head>
+	<body>
+		<h1>Remote HTML Demo</h1>
+		<p>
+			This file demonstrates the HTML pathway. You can author fully custom markup, then let Notion hold the
+			metadata (title, tags, slug) while the site fetches the rendered content from GitHub.
+		</p>
+		<figure>
+			<img src="./media/wireframe.svg" alt="Wireframe sketch" width="480" height="230" />
+			<figcaption>Relative assets come along for the ride.</figcaption>
+		</figure>
+		<section>
+			<h2>What to test</h2>
+			<ul>
+				<li>Place this folder in a repo and point one Notion post at the <code>index.html</code>.</li>
+				<li>Add the repo prefix to <code>external-content.url-prefixes</code>.</li>
+				<li>Run <code>npm run build-local</code> and verify the post renders like any other internal page.</li>
+			</ul>
+		</section>
+	</body>
+</html>

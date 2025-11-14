@@ -1,0 +1,33 @@
+---
+const { title = "Note" } = Astro.props;
+---
+
+<div class="fancy-badge">
+	<strong>{title}</strong>
+	<div class="fancy-badge__body">
+		<slot />
+	</div>
+</div>
+
+<style>
+	.fancy-badge {
+		border: 1px solid rgba(120, 119, 198, 0.6);
+		border-radius: 0.75rem;
+		padding: 0.85rem 1rem;
+		background: rgba(99, 102, 241, 0.08);
+		font-size: 0.9rem;
+	}
+	.fancy-badge strong {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.75rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: rgb(79, 70, 229);
+	}
+	.fancy-badge__body {
+		margin-top: 0.35rem;
+		color: rgb(30, 41, 59);
+	}
+</style>

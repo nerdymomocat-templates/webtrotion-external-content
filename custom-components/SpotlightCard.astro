@@ -1,0 +1,53 @@
+---
+const { title = "Custom Component", href = "#" } = Astro.props;
+---
+
+<article class="spotlight-card">
+	<div class="spotlight-card__halo" aria-hidden="true"></div>
+	<h3>{title}</h3>
+	<p>
+		This reusable component can live in a shared GitHub folder. Once remote-component ingestion is wired up, MDX
+		or Markdown posts can import it just like local Astro components.
+	</p>
+	<a href={href} rel="noopener" class="spotlight-card__cta">Learn more →</a>
+</article>
+
+<style>
+	:global(:root) {
+		--spotlight-accent: 255 255 255;
+	}
+	.spotlight-card {
+		position: relative;
+		overflow: hidden;
+		border-radius: 1rem;
+		padding: 1.5rem;
+		background-color: rgba(15, 23, 42, 0.9);
+		color: rgb(226, 232, 240);
+		border: 1px solid rgba(148, 163, 184, 0.35);
+	}
+	.spotlight-card__halo {
+		position: absolute;
+		inset: auto auto -60% -20%;
+		width: 140%;
+		height: 140%;
+		background: radial-gradient(circle, rgba(147, 197, 253, 0.55), transparent 60%);
+		transform: rotate(-12deg);
+		pointer-events: none;
+	}
+	h3 {
+		margin: 0 0 0.5rem;
+		font-size: 1.3rem;
+	}
+	p {
+		margin-bottom: 0.9rem;
+		line-height: 1.4;
+	}
+	.spotlight-card__cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+		font-weight: 600;
+		text-decoration: none;
+		color: rgb(147, 197, 253);
+	}
+</style>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 230" role="img" aria-label="Wireframe sketch">
+  <rect width="480" height="230" fill="#f8fafc" stroke="#0f172a" stroke-width="4" rx="12" />
+  <rect x="24" y="28" width="432" height="48" fill="none" stroke="#94a3b8" stroke-width="2" rx="8" />
+  <line x1="36" y1="52" x2="444" y2="52" stroke="#cbd5f5" stroke-width="1.5" stroke-dasharray="6 4" />
+  <rect x="24" y="92" width="140" height="110" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2" rx="10" />
+  <rect x="184" y="92" width="272" height="110" fill="none" stroke="#7dd3fc" stroke-width="2" rx="10" />
+  <text x="44" y="152" font-family="monospace" font-size="18" fill="#4c1d95">IMG</text>
+  <text x="204" y="140" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#0f172a">
+    Article body goes here
+  </text>
+</svg>
