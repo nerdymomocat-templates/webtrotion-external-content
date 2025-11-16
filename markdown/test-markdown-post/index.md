@@ -1,24 +1,47 @@
----
-title: Remote Markdown Demo
-excerpt: A short sample post rendered entirely from a GitHub folder.
----
+# Markdown Integration Surface
 
-# Remote Markdown Demo
+> [!NOTE]
+> This tests GitHub callouts, footnotes [^fn1], citations [@smith2020], media, HTML passthrough, tasks, and tables.
 
-![Hand drawn shapes](./media/post-hero.svg)
+## Headings and Lists
+- Bullet item one
+- [ ] Task unchecked
+- [x] Task checked
+1. Ordered one
+2. Ordered two
 
-This is a **Markdown-only** post that lives outside of Notion. When you set the Notion page’s External URL to the GitHub path for `index.md`, Webtrotion will download:
+### Blockquote
+> Nested text with a [link](https://example.com) and a footnote marker [^fn2].
 
-- this file,
-- everything inside the sibling `./media/` folder,
-- and render it through the normal `PostLayout`.
+## Code Fence
+```js
+console.log("hello world");
+```
 
-## Why this is useful
+## Table (alignment ignored)
 
-- Keep long-form writing, diagrams, or custom MDX components under version control.
-- Still drive the front-matter (title, tags, slug, etc.) from Notion.
-- Blend Notion-native articles with GitHub-authored ones in listings, RSS, and sitemap.
+| Feature         | Status  | Notes              |
+| --------------- | ------- | ------------------ |
+| Callouts        | ✅      | [!WARNING] inside cells stays literal |
+| Tasks           | ✅      | Task list items map to ToDo            |
+| Footnotes       | ✅      | GFM footnotes collected                |
 
-## Extras
+## Media
 
-You can add callouts, fenced code blocks, tables, or embeds—anything Markdown supports. Relative links such as [`./media/post-hero.svg`](./media/post-hero.svg) continue to work because the downloader mirrors the folder structure in `public/posts/<slug>/`.
+- Inline image: here ![hello](./media/post-hero.svg)
+- Video link auto-upgraded: [Launch video](./media/sqmedia.mp4)
+
+## Raw HTML passthrough
+<div class="custom-html-block">
+  <p>Inline HTML with <strong>bold</strong> and a relative asset:</p>
+  <img src="./media/post-hero.svg" alt="Hero via HTML" />
+</div>
+<!-- This comment should be hidden -->
+
+## Footnotes & Citations
+
+Regular paragraph with citation [@smith2020] and another footnote [^fn3].
+
+[^fn1]: Footnote one from callout.
+[^fn2]: Footnote from inside a quote.
+[^fn3]: Footnote from the closing section.
