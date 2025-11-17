@@ -3,7 +3,10 @@ const { title = "Note" } = Astro.props;
 ---
 
 <div class="fancy-badge">
-	<strong>This is TITLE: {title}</strong>
+	<strong>
+		<img src="./media/icon.png" alt="" class="icon" />
+		This is TITLE: {title}
+	</strong>
 	<div class="fancy-badge__body">
 		<slot />
 	</div>
@@ -17,6 +20,7 @@ const { title = "Note" } = Astro.props;
 		background: rgba(99, 102, 241, 0.08);
 		font-size: 0.9rem;
 	}
+
 	.fancy-badge strong {
 		display: inline-flex;
 		align-items: center;
@@ -26,6 +30,14 @@ const { title = "Note" } = Astro.props;
 		text-transform: uppercase;
 		color: rgb(79, 70, 229);
 	}
+
+	.fancy-badge strong .icon {
+		width: 14px;
+		height: 14px;
+		object-fit: cover;
+		border-radius: 2px;
+	}
+
 	.fancy-badge__body {
 		margin-top: 0.35rem;
 		color: rgb(30, 41, 59);
