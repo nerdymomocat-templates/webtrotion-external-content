@@ -3,7 +3,7 @@ const { title = "Note" } = Astro.props;
 ---
 
 <div class="fancy-badge">
-	<strong>{title}</strong>
+	<strong>This is TITLE: {title}</strong>
 	<div class="fancy-badge__body">
 		<slot />
 	</div>
@@ -11,7 +11,7 @@ const { title = "Note" } = Astro.props;
 
 <style>
 	.fancy-badge {
-		border: 1px solid rgba(120, 119, 198, 0.6);
+		border: 2px solid rgba(120, 119, 198, 0.6);
 		border-radius: 0.75rem;
 		padding: 0.85rem 1rem;
 		background: rgba(99, 102, 241, 0.08);
